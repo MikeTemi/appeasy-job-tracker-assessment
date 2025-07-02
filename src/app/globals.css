@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #121212;
+  --mint-green: #98f72a;
+  --charcoal: #121212;
+  --light-gray: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-mint-green: var(--mint-green);
+  --color-charcoal: var(--charcoal);
+  --color-light-gray: var(--light-gray);
+  --color-primary: var(--mint-green);
+  --color-text: var(--charcoal);
+  --font-sans:
+    system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    "Noto Sans", sans-serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo,
+    monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #121212;
+    --foreground: #ffffff;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* AppEasy Brand Utilities */
+.text-mint-green {
+  color: #98f72a;
+}
+
+.bg-mint-green {
+  background-color: #98f72a;
+}
+
+.text-charcoal {
+  color: #121212;
+}
+
+.bg-charcoal {
+  background-color: #121212;
+}
+
+.border-mint-green {
+  border-color: #98f72a;
+}
+
+/* Custom responsive design foundation */
+.container-appeasy {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .container-appeasy {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-appeasy {
+    padding: 0 3rem;
+  }
+}
